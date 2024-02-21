@@ -1,0 +1,8 @@
+<nav mat-tab-nav-bar color="primary" [tabPanel]="tabPanel">
+    @for (city of cities; track city) {
+      <a mat-tab-link (click)="setCity(city)" [active]="selectedCity == city"> {{city}} </a>
+    } @empty {
+      <span>Search to Add Cities</span>
+    }
+  </nav>
+  <mat-tab-nav-panel #tabPanel></mat-tab-nav-panel>

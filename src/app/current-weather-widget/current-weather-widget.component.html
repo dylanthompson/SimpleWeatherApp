@@ -1,0 +1,22 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>Current Weather</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+
+        <div class="current-weather-report">
+            <h2 class="mat-h2"></h2>
+            @if(weatherReport != null)
+            {
+            <div class="hourly-entry">
+                <span>{{weatherReport.temperature}}°</span>
+                <img [src]="weatherReport.logo" />
+            </div>
+            } @else {
+            <div class="spinner">
+                <mat-spinner></mat-spinner>
+            </div>
+            }
+        </div>
+    </mat-card-content>
+</mat-card>

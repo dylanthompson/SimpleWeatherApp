@@ -1,0 +1,24 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>Tomorrow's Forecast</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <div class="hourly-report">
+            @for(entry of weatherReport; track entry)
+            {
+            <div class="hourly-entry">
+                <span>{{entry.temperature}}°</span>
+                <img [src]="entry.logo" />
+                <span>{{entry.time | date: 'shortTime'}}</span>
+                <span>{{entry.time | date: 'shortDate'}}</span>
+            </div>
+
+            } @empty {
+            <div class="spinner">
+                <mat-spinner></mat-spinner>
+            </div>
+
+            }
+        </div>
+    </mat-card-content>
+</mat-card>

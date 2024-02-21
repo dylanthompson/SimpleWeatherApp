@@ -1,0 +1,30 @@
+.hourly-report {
+    display: flex;
+    padding-top:32px;
+    padding-left:32px;
+    padding-right:32px;
+    justify-content: space-between;
+    flex-wrap:wrap;
+    
+}
+
+.spinner {
+    width:100%;
+    display: flex;
+    justify-content: center;
+}
+
+.hourly-entry {
+    max-width:200px;
+    flex-grow: 1;
+    flex-direction: column;
+    display:flex;
+    padding-bottom:32px;
+    span {
+        text-align:center;
+    }
+}
+
+mat-card {
+    margin-bottom: 32px;
+}
